@@ -66,11 +66,12 @@ body::before {
     margin-right: auto;
   }
   .controlColumn {
+    display: flex;
     position: absolute;
-    max-width: calc(100% - 32px);
+    max-width: 100%;
+    left: 0;
     bottom: 50px;
     overflow-y: hidden;
-    left: 16px;
     height: 130px;
     white-space: nowrap;
   }
