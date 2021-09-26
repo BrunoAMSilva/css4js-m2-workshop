@@ -2,6 +2,7 @@
   padding-top: 128px;
   padding-bottom: 64px;
   isolation: isolate;
+  position: relative;
 }
 
 .maxWidthWrapper {
@@ -48,10 +49,29 @@ body::before {
   height: 40%;
 }
 
-#root {
-  isolation: isolate;
-}
-
 .controlColumn {
   max-width: 50%;
+}
+
+@media (max-width: 512px) {
+  .header {
+    max-width: 100%;
+  }
+  .characterWrapper {
+    position: static;
+    width: calc(100vw - 128px);
+    min-height: auto;
+    max-height: 85vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .controlColumn {
+    position: absolute;
+    max-width: calc(100% - 32px);
+    bottom: 50px;
+    overflow-y: hidden;
+    left: 16px;
+    height: 130px;
+    white-space: nowrap;
+  }
 }
