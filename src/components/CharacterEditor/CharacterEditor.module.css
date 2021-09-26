@@ -1,12 +1,15 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  isolation: isolate;
 }
 
 .maxWidthWrapper {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .header {
@@ -29,11 +32,24 @@
 
 .characterWrapper {
   position: fixed;
-  top: 250px;
-  right: 0;
-  width: 50%;
+  top: 128px;
+  right: 64px;
+  width: 35%;
   min-height: 500px;
-  border: 1px solid;
+}
+
+body::before {
+  content: "";
+  background-color: hsl(195deg, 20%, 75%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+}
+
+#root {
+  isolation: isolate;
 }
 
 .controlColumn {
